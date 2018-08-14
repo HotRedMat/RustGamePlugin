@@ -1,1 +1,1 @@
-Rust Game 함글 플러그인입니다.
+ConvertKor - 한글플러그인
