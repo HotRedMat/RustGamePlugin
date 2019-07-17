@@ -384,7 +384,7 @@ namespace Oxide.Plugins
         [HookMethod("OnBetterChat")]
         private object OnBetterChat(Dictionary<string, object> data)
         {
-            String inMessage = (String) data["Text"];
+            String inMessage = (String) data["Message"];
             String convertMessage = "";
 
             IPlayer player = (IPlayer)data["Player"];
@@ -395,7 +395,7 @@ namespace Oxide.Plugins
 
             LogChatFile("", convertMessage, player.Id, player.Name);
 
-            data["Text"] = GetChangeForbiddenWord(convertMessage);
+            data["Message"] = GetChangeForbiddenWord(convertMessage);
 
             return data;
         }
